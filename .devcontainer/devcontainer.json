@@ -1,0 +1,34 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "Dev Tree Server",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "dev-tree-backend",
+  "workspaceFolder": "/app",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.js-debug-nightly",
+        "rvest.vs-code-npm-scripts",
+        "usernamehw.errorlens",
+        "aaron-bond.better-comments"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Default Dark Plus",
+        "editor.formatOnSave": true,
+        "javascript.validate.enable": false,
+        "eslint.run": "onType"
+      }
+    }
+  },
+
+ "portsAttributes": {
+      "3000": {
+        "label": "Dev Tree Server",
+        "onAutoForward": "openBrowserOnce"
+      }
+    },
+    "forwardPorts": [3000]
+  }
